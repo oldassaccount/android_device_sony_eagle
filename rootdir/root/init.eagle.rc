@@ -1,0 +1,15 @@
+on boot
+    # CMDLINE
+    chmod 0644 /proc/cmdline
+
+    # Panel backlight
+    chown system system /sys/class/leds/lm3630-lcd-bl/brightness
+    chmod 660 /sys/class/leds/lm3630-lcd-bl/brightness
+
+    # Flash
+    chown system camera /sys/class/leds/torch-light/brightness
+    chmod 666 /sys/class/leds/torch-light/brightness
+
+    # Vibrator
+    chown system system /sys/class/timed_output/vibrator/enable
+
